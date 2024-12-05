@@ -26,12 +26,11 @@ const BottomMenu = () => {
           tabBarStyle: {
             backgroundColor: colors.darkBlack,
             borderColor: null, height: 70,
-            paddingTop: 10,
-            
+            paddingTop: 10
           }
         })}
       >
-        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Home" component={Home}  options={{headerShown: false}}/>
       </Tab.Navigator>
     );
   };
