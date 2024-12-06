@@ -7,19 +7,23 @@ const Home = ()=>{
     const data = [
         {
             title: "Entrada/Saída",
-            description: "Registrar horário de trabalho"
+            description: "Registrar horário de trabalho",
+            route: "Registrar"
         },
         {
             title: "Lembrete",
-            description: "Agende um Lembrete para Registrar Seu Ponto"
+            description: "Agende um Lembrete para Registrar Seu Ponto",
+            route: "Notification"
         },
         {
             title: "Visão Geral",
-            description: "Acessar gráfico geral"
+            description: "Acessar gráfico geral",
+            route: "Análise"
         },
         {
             title: "Histórico",
-            description: "Acessar o hitórico de registros"
+            description: "Acessar o hitórico de registros",
+            route: "Histórico"
         },
     ]
 
@@ -29,7 +33,7 @@ const Home = ()=>{
             <View style={styleHome.containerCard}>
                 {
                     data.map((index, key)=>(
-                        <HomeCards title={index.title} description={index.description}  key={key}/>
+                        <HomeCards title={index.title} description={index.description} route={index.route} key={key}/>
                     ))
                 }
             </View>
