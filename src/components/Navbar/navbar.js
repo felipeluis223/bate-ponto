@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import { styleNavbar } from "./style";
+import LogoAnimation from '../LogoAnimation';
 
 const Navbar = () => {
     const titleData = {
@@ -9,6 +10,9 @@ const Navbar = () => {
 
     return(
         <View style={styleNavbar.container}>
+            <View style={styleNavbar.containerLogo}>
+                <LogoAnimation width={160} height={160} />
+            </View>
             <View style={styleNavbar.containerTitle}>
                 <Text style={styleNavbar.title}>{titleData.description}</Text>
                 <Text style={styleNavbar.titleText}>{titleData.title}</Text>

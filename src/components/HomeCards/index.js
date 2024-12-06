@@ -3,7 +3,6 @@ import { styleHomeCards } from "./style";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { colors } from "../../styles/colors";
 
-
 const HomeCards = ({title, description, route}) => {
     return(
         <View style={styleHomeCards.container}>

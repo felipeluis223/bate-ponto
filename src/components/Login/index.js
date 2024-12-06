@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Alert, TouchableOpacity} from 'react-native';
 import { styleLogin } from './style';
-import LottieView from 'lottie-react-native';    
 import * as LocalAuthentication from 'expo-local-authentication';
+import LogoAnimation from '../LogoAnimation';
 
 const LoginInterface = ({navigation})=>{
     const [ isAuthenticated, setIsAuthenticated ] = useState(false);
@@ -40,13 +40,9 @@ const LoginInterface = ({navigation})=>{
     return(
         <View style={styleLogin.fullBox}>
             <View style={styleLogin.containerUp}>
-                <LottieView
-                    source={require('../../../assets/animations/loading.json')} // Caminho para o arquivo Lottie
-                    autoPlay // Inicia a animação automaticamente
-                    loop // Faz a animação repetir em loop
-                    style={styleLogin.lottie}
-                />
+                <LogoAnimation width={200} height={200} />
                 <Text style={styleLogin.title}>Bem-vindo ao Bate-Ponto</Text>
+                <Text style={styleLogin.subtitle}>Controle de Jornada Simplificado: Marque seus pontos com praticidade e segurança.</Text>
             </View>
             <View style={styleLogin.containerDown}>
                 <TouchableOpacity style={styleLogin.button} onPress={handleBiometricAuth}>

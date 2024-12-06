@@ -5,7 +5,8 @@ export const styleHomeCards = StyleSheet.create({
     container: {
         width: 450,
         height: 100,
-        backgroundColor: colors.purple,
+        borderBottomColor: colors.purple,
+        backgroundColor: colors.whiteGhost,
         borderRadius: 20,
         flexDirection: 'row',
         ...Platform.select({
@@ -28,14 +29,18 @@ export const styleHomeCards = StyleSheet.create({
     containerIcon: {
         width: "15%",
         justifyContent: "center",
+        backgroundColor: colors.purple,
+        paddingLeft: 15, 
+        borderTopRightRadius: 28,
+        borderBottomRightRadius: 28
     },
     title: {
         fontSize: 25,
         fontWeight: 'bold',
-        color: colors.white,
+        color: colors.purple,
     },
     description: {
         fontSize: 15,
-        color: colors.whiteGhost,
-    }
+        color: colors.grey,
+    },
 });

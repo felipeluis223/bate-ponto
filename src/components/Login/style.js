@@ -12,15 +12,16 @@ export const styleLogin = StyleSheet.create({
         width:'100%', height: '70%',
         justifyContent: 'center', alignItems: 'center'
     },
-    lottie: {
-        width: 200,
-        height: 200,
-      },
       title: {
         fontSize: 25,
         color: colors.white, 
         fontWeight: 'bold', 
       },  
+      subtitle: {
+        color: colors.grey,
+        fontSize: 18, textAlign: 'center',
+        paddingTop: 20
+      },
       containerDown:{
         width:'100%', height:'30%',
         justifyContent: 'center', alignItems: 'center'

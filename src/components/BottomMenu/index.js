@@ -14,9 +14,15 @@ const BottomMenu = () => {
             let iconName;
   
             if (route.name === 'Home') {
-              iconName = 'home';
-            } else if (route.name === 'Settings') {
-              iconName = 'settings';
+              iconName = 'home-outline';
+            } else if (route.name === 'Registrar') {
+              iconName = 'add-circle-outline';
+            }
+            else if(route.name === "Histórico"){
+              iconName = 'file-tray-stacked-outline'
+            }
+            else if(route.name === "Análise"){
+              iconName = 'stats-chart-outline'
             }
   
             return <Ionicons name={iconName} size={size} color={color} />;
@@ -31,6 +37,9 @@ const BottomMenu = () => {
         })}
       >
         <Tab.Screen name="Home" component={Home}  options={{headerShown: false}}/>
+        <Tab.Screen name="Registrar" component={Home}  options={{headerShown: false}}/>
+        <Tab.Screen name="Histórico" component={Home}  options={{headerShown: false}}/>
+        <Tab.Screen name="Análise" component={Home}  options={{headerShown: false}}/>
       </Tab.Navigator>
     );
   };
