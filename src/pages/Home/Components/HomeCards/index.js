@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { styleHomeCards } from "./style";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { colors } from "../../styles/colors";
+import { colors } from "../../../../styles/colors";
 import { useNavigation } from '@react-navigation/native';
 
 const HomeCards = ({title, description, route}) => {

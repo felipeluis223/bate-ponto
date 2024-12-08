@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { colors } from './src/styles/colors';
-import Template from './src/components/Template';
+import Template from './src/Template';
 
 export default function App() {
   return (

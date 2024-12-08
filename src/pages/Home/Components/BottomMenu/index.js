@@ -1,10 +1,10 @@
-import Home from "../Home";
+import Home from "../../../Home";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { colors } from "../../styles/colors";
-import Register from "../Register";
-import Chart from "../Chart";
-import Historic from "../Historic";
+import { colors } from "../../../../styles/colors";
+import Register from "../../../Register";
+import Chart from "../../../Chart";
+import Historic from "../../../Historic";
 
 // Navegação de Abas
 const Tab = createBottomTabNavigator();
@@ -27,6 +27,9 @@ const BottomMenu = () => {
             else if(route.name === "Análise"){
               iconName = 'stats-chart-outline'
             }
+            else if(route.name === "Lembrete"){
+              iconName = 'notifications-outline'
+            }
   
             return <Ionicons name={iconName} size={size} color={color} />;
           },
@@ -43,6 +46,7 @@ const BottomMenu = () => {
         <Tab.Screen name="Registrar" component={Register}  options={{headerShown: false}}/>
         <Tab.Screen name="Histórico" component={Historic}  options={{headerShown: false}}/>
         <Tab.Screen name="Análise" component={Chart}  options={{headerShown: false}}/>
+        <Tab.Screen name="Lembrete" component={Chart}  options={{headerShown: false}}/>
       </Tab.Navigator>
     );
   };

@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import { styleHome } from "./style";
-import Navbar from "../Navbar/navbar";
-import HomeCards from "../HomeCards";
+import Navbar from "./Components/Navbar";
+import HomeCards from "./Components/HomeCards";
 
 const Home = ()=>{
     const data = [
@@ -13,7 +13,7 @@ const Home = ()=>{
         {
             title: "Lembrete",
             description: "Agende um Lembrete para Registrar Seu Ponto",
-            route: "Notification"
+            route: "Lembrete"
         },
         {
             title: "Visão Geral",

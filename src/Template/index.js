@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import LoginInterface from '../Login';
-import BottomMenu from '../BottomMenu';
+import LoginInterface from '../pages/Login';
+import BottomMenu from '../pages/Home/Components/BottomMenu';
 
 // Navegação Principal
 const Stack = createStackNavigator();

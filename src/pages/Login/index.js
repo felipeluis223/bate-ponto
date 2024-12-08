@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Alert, TouchableOpacity} from 'react-native';
 import { styleLogin } from './style';
 import * as LocalAuthentication from 'expo-local-authentication';
-import LogoAnimation from '../LogoAnimation';
+import LogoAnimation from '../../pages/Home/Components/LogoAnimation';
 
 const LoginInterface = ({navigation})=>{
     const [ isAuthenticated, setIsAuthenticated ] = useState(false);
