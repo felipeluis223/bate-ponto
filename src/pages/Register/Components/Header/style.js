@@ -4,18 +4,17 @@ import { colors } from "../../../../styles/colors";
 export const styleHeader = StyleSheet.create({
     fullbox: {
         width: '100%', height: 150,
-        backgroundColor: colors.purple,
-        justifyContent: 'flex-end', paddingBottom: 30
+        justifyContent: 'flex-end', paddingBottom: 10
     },
     title: {
-        color: colors.white,
-        fontSize: 35, 
-        fontWeight: 'bold', textAlign: 'center',
+        color: colors.black,
+        fontSize: 30, 
+        textAlign: 'center',
         fontStyle: 'italic'
     },
     subtitle: {
         fontSize: 20,
-        color: colors.white,
+        color: colors.grey,
         textAlign: 'center',
         fontStyle: 'italic',
         fontWeight: 'bold'
