@@ -4,8 +4,7 @@ import { styleHeader } from "./style";
 const Header = ()=> {
     return (
         <View style={styleHeader.fullbox}>
-            <Text style={styleHeader.title}>Entrada e Saída</Text>
-            <Text style={styleHeader.subtitle}>Controle Simples e Eficiente de Horas Trabalhadas</Text>
+            <Text style={styleHeader.title}>Registrar Entrada/Saída</Text>
         </View>
     );
 };

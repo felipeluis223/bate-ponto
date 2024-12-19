@@ -17,7 +17,8 @@ export const styleShortly = StyleSheet.create({
     subtitle: {
         fontSize: 20,
         color: colors.grey,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontWeight: 'bold'
     }
 
 });
