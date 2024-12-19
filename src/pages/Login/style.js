@@ -33,7 +33,7 @@ export const styleLogin = StyleSheet.create({
       labelButton: {
         textAlign: 'center',
         fontSize: 20,
-        color: colors.grey,
+        color: colors.white,
         fontWeight: 'bold', 
         justifyContent: 'center', alignItems: 'center'
       },
@@ -85,8 +85,10 @@ export const styleLogin = StyleSheet.create({
         justifyContent: 'center', alignItems: 'center'
       },
       buttonBiometrich: {
-        width: '100%', height: 50, 
+        width: '80%', height: 50, 
         justifyContent: 'center',
+        backgroundColor: colors.purple,
+        borderRadius: 15
 
       }
 });

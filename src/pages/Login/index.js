@@ -3,13 +3,10 @@ import { View, Text, Alert, TouchableOpacity, TextInput, Button} from 'react-nat
 import { styleLogin } from './style';
 import * as LocalAuthentication from 'expo-local-authentication';
 import LogoAnimation from '../../pages/Home/Components/LogoAnimation';
-import { colors } from '../../styles/colors'
 
 const LoginInterface = ({navigation})=>{
     const [ isAuthenticated, setIsAuthenticated ] = useState(false);
-    const [ email, setEmail ] = useState('');
-    const [ senha, setSenha ] = useState('');
-
+    
     const handleBiometricAuth = async()=>{
         // Verificar se o dipositivo tem a biometria:
         const hasHardware = await LocalAuthentication.hasHardwareAsync();
@@ -49,41 +46,11 @@ const LoginInterface = ({navigation})=>{
             </View>
 
             <View style={styleLogin.containerDown}>
-                <Text style={styleLogin.title}>Login</Text>
-                <View style={styleLogin.containerRegister}>
-                    <View style={styleLogin.containerLabelInput}>
-                        <Text style={styleLogin.textLabel}>Email:</Text>
-                        <TextInput
-                            style={styleLogin.textInput}
-                            placeholder="Digite seu email"
-                            onChangeText={setEmail}
-                            placeholderTextColor={colors.grey}
-                        />
-                    </View>
-
-                    <View style={styleLogin.containerLabelInput}>
-                        <Text style={styleLogin.textLabel}>Senha:</Text>
-                        <TextInput
-                            style={styleLogin.textInput}
-                            placeholder="Digite sua senha"
-                            onChangeText={setEmail}
-                            placeholderTextColor={colors.grey}
-                        />
-                    </View>
-
-                    <View style={styleLogin.containerButton}>
-                        <TouchableOpacity style={styleLogin.button}>
-                            <Text style={styleLogin.buttonLabel}>Login</Text>
+                <View style={styleLogin.containerRegister}>                
+                    <View style={styleLogin.containerBiometrich}>
+                        <TouchableOpacity style={styleLogin.buttonBiometrich} onPress={handleBiometricAuth}>
+                            <Text style={styleLogin.labelButton}>Acessar pela biometria</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styleLogin.containerInputRegister}>
-                            <Text style={styleLogin.labelInputRegister}>Não tem conta ainda? Cadastre-se</Text>
-                        </TouchableOpacity>
-                        
-                        <View style={styleLogin.containerBiometrich}>
-                            <TouchableOpacity style={styleLogin.buttonBiometrich} onPress={handleBiometricAuth}>
-                                <Text style={styleLogin.labelButton}>Acessar pela biometria</Text>
-                            </TouchableOpacity>
-                        </View>
                     </View>
                 </View>
             </View>

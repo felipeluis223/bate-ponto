@@ -5,6 +5,7 @@ import { colors } from "../../../../styles/colors";
 import Register from "../../../Register";
 import Chart from "../../../Chart";
 import Historic from "../../../Historic";
+import Notification from "../../../NotificationAlert";
 
 // Navegação de Abas
 const Tab = createBottomTabNavigator();
@@ -46,7 +47,7 @@ const BottomMenu = () => {
         <Tab.Screen name="Registrar" component={Register}  options={{headerShown: false}}/>
         <Tab.Screen name="Histórico" component={Historic}  options={{headerShown: false}}/>
         <Tab.Screen name="Análise" component={Chart}  options={{headerShown: false}}/>
-        <Tab.Screen name="Lembrete" component={Chart}  options={{headerShown: false}}/>
+        <Tab.Screen name="Lembrete" component={Notification}  options={{headerShown: false}}/>
       </Tab.Navigator>
     );
   };
